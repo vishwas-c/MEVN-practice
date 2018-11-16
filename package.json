@@ -1,0 +1,19 @@
+{
+  "name": "testapp",
+  "version": "1.0.0",
+  "description": "Simple test app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vishwas-c/node-basic-practice.git"
+  },
+  "author": "Vishwas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vishwas-c/node-basic-practice/issues"
+  },
+  "homepage": "https://github.com/vishwas-c/node-basic-practice#readme"
+}
