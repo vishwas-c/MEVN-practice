@@ -1,6 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
+var expressValidator = require('express-validator');
 
 var app = express();
 
@@ -33,11 +34,42 @@ app.use(bodyParser.urlencoded({extended:false}));
     }
 ]
  */
+
+var users = [
+    {
+        id:1,
+        first_name:'Vishwas',
+        last_name: 'Doe',
+        email: 'vishwasdoe@gmail.com',
+    },
+    {
+        id:2,
+        first_name:'Rocky',
+        last_name: 'Doe',
+        email: 'rocky@gmail.com',
+    },
+    {
+        id:3,
+        first_name:'simha',
+        last_name: 'DOe',
+        email: 'simha@gmail.com',
+    }
+] 
 app.get('/',function(req,res){
 
     res.render('index',{
-        title: 'Customer'
+        title: 'Vishwas',
+        users: users
     });
+});
+
+app.post('/users/add',function(req,res){
+    var newUser = {
+        first_name: req.body.first_name,
+        last_name: req.body.last_name,
+        email: req.body.email
+    }
+    console.log(newUser);
 });
 
 app.listen(3000,function() {
